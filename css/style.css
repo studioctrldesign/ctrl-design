@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #5c2d91;
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;     
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+    color: #ffffff;     
+}
+
+
+/* HERO SECTION */
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px;
+    gap: 40px;
+}
+
+/* FOOTER */
+.footer {
+    background: #5c2d91;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #7b42c3;     
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;            
+    font-weight: 600;
+    transition: 0.2s ease;
+    border: none;             
+}
+.btn-primary:hover {
+    background: #692fad;      
+}
+.social {
+    margin-top: 10px;
+}
+
+.social a {
+    margin: 0 10px;
+    font-size: 1.6rem;       
+    color: white;            
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+
+/* ====================================
+ * 8. PÁGINA NOSOTRAS (EQUIPO)
+ * ==================================== */
+
+/* INTRO SECTION */
+.intro {
+    padding: 60px 20px 40px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.intro h1 {
+    font-size: 2.8em;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.intro p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+    text-align: justify;
+}
+
+/* CARDS CONTAINER */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+/* INDIVIDUAL CARD */
+.card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* CARD HEADER (Avatar + Name) */
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    flex-shrink: 0;
+}
+
+.avatar-empty {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    border: 3px dashed #ccc;
+    flex-shrink: 0;
+}
+
+.card-header h3 {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.role {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* CARD DESCRIPTION */
+.desc {
+    flex-grow: 1;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* SOCIAL ICONS IN CARD */
+.social-card {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.social-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+}
+
+.social-card a:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .intro {
+        padding: 40px 15px 30px;
+    }
+    
+    .intro h1 {
+        font-size: 2.2em;
+    }
+    
+    .intro p {
+        font-size: 1em;
+    }
+    
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .card {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .desc {
+        text-align: left;
+    }
+}
