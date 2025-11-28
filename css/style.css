@@ -5,6 +5,10 @@
     font-family: "Inter", sans-serif;
 }
 
+:root {
+    --navbar-height: 72px;
+}
+
 html, body {
     height: 100%;
 }
@@ -14,6 +18,7 @@ body {
     flex-direction: column;
     background: #ffffff;
     color: #222;
+    padding-top: var(--navbar-height); /* evitar que el contenido quede debajo del navbar fijo */
 }
 
 /* NAVBAR */
@@ -24,6 +29,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* fijar al top */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .nav-links a {
     margin: 0 15px;
@@ -46,6 +58,49 @@ body {
     justify-content: space-between;
     padding: 80px 50px;
     gap: 40px;
+}
+
+/* HERO TEXT: mejor alineación y espaciado */
+.hero-text {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.hero-text h1 {
+    margin-bottom: 16px;
+    /* Igual que .intro h1 */
+    font-size: 2.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.hero-text p {
+    margin-bottom: 1rem;
+    /* Igual que .intro p */
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+    text-align: justify;
+}
+.hero-text .btn-primary {
+    margin-top: 1rem;
+    padding: 12px 28px;
+}
+
+/* HERO IMAGE: desplazar ligeramente hacia la izquierda */
+.hero-img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.hero-img img {
+    display: block;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    transform: translateX(-30px);
+    transition: transform 0.2s ease, margin 0.2s ease;
 }
 
 /* FOOTER */
@@ -250,5 +305,29 @@ body {
     
     .desc {
         text-align: left;
+    }
+
+    /* HERO responsive adjustments: apilar y centrar imagen en móviles */
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 20px;
+        align-items: center;
+    }
+    .hero-text {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+    .hero-text p {
+        text-align: center;
+    }
+    .hero-img {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .hero-img img {
+        transform: translateX(0);
+        max-width: 90%;
     }
 }
