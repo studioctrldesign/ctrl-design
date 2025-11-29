@@ -29,7 +29,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* fijar al top */
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
@@ -37,6 +37,7 @@ body {
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
 .nav-links a {
     margin: 0 15px;
     text-decoration: none;
@@ -49,6 +50,9 @@ body {
     color: #ffffff;     
 }
 
+.navbar .logo{
+    margin-left: 5%;
+}
 
 /* HERO SECTION */
 .hero {
@@ -60,6 +64,10 @@ body {
     gap: 40px;
 }
 
+.section{
+    margin-top: 20%;
+}
+
 /* HERO TEXT: mejor alineación y espaciado */
 .hero-text {
     max-width: 640px;
@@ -67,6 +75,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .hero-text h1 {
     margin-bottom: 16px;
     /* Igual que .intro h1 */
@@ -75,6 +84,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 .hero-text p {
     margin-bottom: 1rem;
     /* Igual que .intro p */
@@ -83,6 +93,7 @@ body {
     color: #555;
     text-align: justify;
 }
+
 .hero-text .btn-primary {
     margin-top: 1rem;
     padding: 12px 28px;
@@ -94,6 +105,7 @@ body {
     align-items: center;
     justify-content: flex-end;
 }
+
 .hero-img img {
     display: block;
     max-width: 700px;
