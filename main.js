@@ -41,4 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ejecutar en cada scroll y al cargar
     window.addEventListener("scroll", updateActiveLink);
     updateActiveLink();
+
+    window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        document.querySelector(".navbar").classList.add("scrolled");
+    } else {
+        document.querySelector(".navbar").classList.remove("scrolled");
+    }
 });
