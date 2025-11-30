@@ -33,7 +33,7 @@ a, button, .card, .servicio-card {
     --text-dark: #222;
     --text-light: #555;
     --bg-light: #ffffff;
-    --bg-soft: #ffffff; /* 👉 Fondo blanco */
+    --bg-soft: #ffffff;
     --shadow-sm: 0 6px 15px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
@@ -382,6 +382,88 @@ a, button, .card, .servicio-card {
 
 .servicio-card p {
     color: var(--text-light);
+}
+
+/* ===========================================================
+   CONTACTO
+=========================================================== */
+
+.contacto {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.contacto h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.formulario-contacto {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fila {
+    display: flex;
+    gap: 20px;
+}
+
+.fila .campo {
+    flex: 1;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+    resize: none;   
+    padding: 12px;
+    border: 1px solid #b28cff;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #A020F0;
+    box-shadow: 0 0 5px rgba(160, 32, 240, 0.4);
+}
+
+.btn-enviar {
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #A020F0, #D020F0);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #8d1fd4, #bb1fd4);
+}
+
+.errores {
+    margin-top: 10px;
+    color: #ff4d6d;
+    font-weight: 600;
+    text-align: left;
 }
 
 /* ===========================================================
