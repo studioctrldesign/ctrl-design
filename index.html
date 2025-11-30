@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CTRL+DESIGN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <!-- NAVBAR -->
-    <header class="navbar">
+    <header class="navbar" id="navbar">
         <div class="logo">
             <img src="./img/logo.png" alt="logo" />
         </div>
-
         <nav class="nav-links">
-           <a href="#" class="active">INICIO</a>
-            <a href="#nosotras" >NOSOTRAS</a>
-            <a href="#servicios">SERVICIOS</a>
-            <a href="#contacto">CONTACTO</a>
+            <a href="#home" class="nav-link active" data-target="home">INICIO</a>
+            <a href="#nosotras" class="nav-link" data-target="nosotras">NOSOTRAS</a>
+            <a href="#servicios" class="nav-link" data-target="servicios">SERVICIOS</a>
+            <a href="#contacto" class="nav-link" data-target="contacto">CONTACTO</a>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
+    <!-- INICIO -->
+    <section class="hero scroll-animation" id="home">
+        <div class="hero-text scroll-animation" class="section">
             <h1>CTRL+DESIGN</h1>
-            <p>Diseñamos, desarrollamos y damos vida a tus ideas.</p>
+            <p>Desarrollamos piezas digitales que combinan diseño de alta precisión y tecnología escalable.</p>
+            <p>Creamos sitios web, aplicaciones e interfaces optimizadas para rendimiento, usabilidad y consistencia
+                visual.</p>
+            <p>Trabajamos con procesos centrados en el usuario, arquitectura clara y desarrollo sólido para asegurar
+                productos funcionales, eficientes y listos para crecer.</p>
+            <p>Nuestro objetivo: convertir necesidades digitales en soluciones estables, modernas y perfectamente
+                integradas.</p>
 
             <a href="#" class="btn-primary">Conoce nuestros trabajos</a>
         </div>
-
         <div class="hero-img">
             <img src="./img/imagenHome.png" alt="hero" />
         </div>
