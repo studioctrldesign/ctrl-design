@@ -16,18 +16,17 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: #FFCBA8; /* Fondo mate suave */
+    background: #FFCBA8;
     color: #222;
     line-height: 1.5;
 }
 
-/* Transiciones globales */
 a, button, .card, .servicio-card {
     transition: all 0.28s ease;
 }
 
 /* ===========================================================
-   PALETA (Variables)
+   PALETA
 =========================================================== */
 :root {
     --primary-color: #5c2d91;
@@ -35,7 +34,7 @@ a, button, .card, .servicio-card {
     --text-dark: #222;
     --text-light: #555;
     --bg-light: #ffffff;
-    --bg-soft: #f7f3fb;
+    --bg-soft: #ffffff; /* 👉 Fondo blanco */
     --shadow-sm: 0 6px 15px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
@@ -66,7 +65,6 @@ a, button, .card, .servicio-card {
     font-weight: 700;
 }
 
-/* underline suave */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -86,7 +84,6 @@ a, button, .card, .servicio-card {
 /* ===========================================================
    HERO
 =========================================================== */
-
 .hero {
     flex: 1;
     display: flex;
@@ -94,14 +91,13 @@ a, button, .card, .servicio-card {
     justify-content: space-between;
     padding: 80px 50px;
     gap: 40px;
-    background: var(--bg-soft);
+    background: var(--bg-light);
 }
 
 .hero-text {
     max-width: 600px;
 }
 
-/* Título principal */
 .hero-text h1 {
     font-size: 2.8rem;
     font-weight: 800;
@@ -109,19 +105,16 @@ a, button, .card, .servicio-card {
     color: var(--primary-color);
 }
 
-/* Subtítulo */
 .hero-text p {
     font-size: 1.2rem;
     color: var(--text-light);
     margin-top: 20px;
 }
 
-/* Botón bajo el subtítulo */
 .hero-text .btn-primary {
-    margin-top: 35px;  /* ⭐ MÁS SEPARACIÓN SOLICITADA */
+    margin-top: 35px;
 }
 
-/* Imagen del hero */
 .hero img {
     max-width: 480px;
     width: 100%;
@@ -137,9 +130,7 @@ a, button, .card, .servicio-card {
     color: white;
     font-weight: 600;
     text-decoration: none;
-    border: none;
     font-size: 1rem;
-    display: inline-block;
 }
 
 .btn-primary:hover {
@@ -158,14 +149,17 @@ a, button, .card, .servicio-card {
 }
 
 /* ===========================================================
-   SECCIÓN NOSOTRAS (EQUIPO)
+   NOSOTRAS (ahora igual que SERVICIOS)
 =========================================================== */
+.nosotras-section {
+    background: var(--bg-soft); /* blanco */
+    padding: 70px 40px;
+}
 
 .intro {
-    padding: 60px 20px 40px;
     text-align: center;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 
 .intro h1 {
@@ -174,7 +168,6 @@ a, button, .card, .servicio-card {
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 25px;
-    letter-spacing: 1px;
 }
 
 .intro p {
@@ -184,30 +177,29 @@ a, button, .card, .servicio-card {
     line-height: 1.7;
 }
 
-/* CARDS EQUIPO */
+/* Cards */
 .cards-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 35px;
     max-width: 1200px;
-    margin: 0 auto 60px;
-    padding: 0 20px;
+    margin: 0 auto;
 }
 
 .card {
     flex: 1 1 300px;
     max-width: 350px;
-    background: var(--bg-light);
-    border-radius: 16px;
-    padding: 25px;
+    background: #FFCBA8; /* igual servicios */
+    border-radius: 18px;
+    padding: 35px 25px;
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     box-shadow: var(--shadow-md);
 }
 
@@ -218,25 +210,15 @@ a, button, .card, .servicio-card {
     margin-bottom: 20px;
 }
 
-.avatar, .avatar-empty {
+.avatar {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    border: 3px solid var(--primary-light);
     object-fit: cover;
 }
 
-.avatar {
-    border: 3px solid var(--primary-light);
-}
-
-.avatar-empty {
-    background: #f0f0f0;
-    border: 3px dashed #ccc;
-}
-
 .card-header h3 {
-    font-size: 1.4em;
-    font-weight: 700;
     color: var(--primary-color);
 }
 
@@ -248,7 +230,7 @@ a, button, .card, .servicio-card {
 }
 
 .desc {
-    color: var(--text-light);
+    color: var(--text-dark);
     text-align: justify;
     flex-grow: 1;
     margin-bottom: 20px;
@@ -279,9 +261,8 @@ a, button, .card, .servicio-card {
 }
 
 /* ===========================================================
-   SECCIÓN SERVICIOS
+   SERVICIOS
 =========================================================== */
-
 .servicios-section {
     padding: 70px 40px;
     background: var(--bg-soft);
@@ -292,8 +273,6 @@ a, button, .card, .servicio-card {
     font-size: 2.8em;
     color: var(--primary-color);
     font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     margin-bottom: 50px;
 }
 
@@ -320,42 +299,29 @@ a, button, .card, .servicio-card {
 .servicio-icon {
     width: 75px;
     height: 75px;
-    object-fit: contain;
     margin-bottom: 18px;
 }
 
 .servicio-card h3 {
-    font-size: 1.35em;
-    font-weight: 700;
-    margin-bottom: 12px;
     color: var(--text-dark);
 }
 
 .servicio-card p {
     color: var(--text-light);
-    line-height: 1.7;
-    font-size: 1em;
 }
 
 /* ===========================================================
    RESPONSIVE
 =========================================================== */
-
 @media (max-width: 900px) {
     .servicios-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
     }
 }
 
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .hero img {
-        max-width: 350px;
     }
 
     .cards-container {
@@ -367,9 +333,5 @@ a, button, .card, .servicio-card {
 @media (max-width: 600px) {
     .servicios-grid {
         grid-template-columns: 1fr;
-    }
-
-    .servicios-section {
-        padding: 40px 20px;
     }
 }
