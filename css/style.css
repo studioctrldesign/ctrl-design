@@ -258,13 +258,11 @@ a, button, .card, .servicio-card {
 /* ====================================
                 PÁGINA NOSOTRAS (EQUIPO)
  * ==================================== */
-
 .nosotras-section {
     background: var(--bg-soft);
     padding: 70px 40px;
 }
 
-/* INTRO SECTION */
 .intro {
     padding: 60px 20px 40px;
     text-align: center;
@@ -305,7 +303,7 @@ a, button, .card, .servicio-card {
     max-width: 350px;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
     padding: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -313,8 +311,9 @@ a, button, .card, .servicio-card {
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+    border-top: #FFCBA8 4px solid;
 }
 
 /* CARD HEADER (Avatar + Name) */
