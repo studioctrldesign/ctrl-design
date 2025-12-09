@@ -535,6 +535,11 @@ a, button, .card, .servicio-card {
     text-align: left;
 }
 
+/* Seguir arreglando los espacios */
+main > section {
+    padding: 140px 40px;
+}
+
 
 /* ===========================================================
    RESPONSIVE
