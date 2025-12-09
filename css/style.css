@@ -18,7 +18,27 @@ body {
     flex-direction: column;
     background: #ffffff;
     color: #222;
-    padding-top: var(--navbar-height); /* evitar que el contenido quede debajo del navbar fijo */
+    line-height: 1.5;
+    padding-top: var(--navbar-height);
+}
+
+a, button, .card, .servicio-card {
+    transition: all 0.28s ease;
+}
+
+/* ===========================================================
+   PALETA
+=========================================================== */
+:root {
+    --navbar-height: 72px;
+    --primary-color: #5c2d91;
+    --primary-light: #7b42c3;
+    --text-dark: #222;
+    --text-light: #555;
+    --bg-light: #ffffff;
+    --bg-soft: #ffffff;
+    --shadow-sm: 0 6px 15px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* NAVBAR */
@@ -272,14 +292,148 @@ body {
     transform: scale(1.1);
 }
 
-/* RESPONSIVE ADJUSTMENTS */
-@media (max-width: 768px) {
-    .intro {
-        padding: 40px 15px 30px;
-    }
-    
-    .intro h1 {
-        font-size: 2.2em;
+/* ===========================================================
+   SERVICIOS
+=========================================================== */
+.servicios-section {
+    padding: 70px 40px;
+    background: var(--bg-soft);
+    text-align: center;
+}
+
+.servicios-title {
+    font-size: 2.8em;
+    color: var(--primary-color);
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.servicios-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.servicio-card {
+    background: #FFCBA8;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: var(--shadow-sm);
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.servicio-icon {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 18px;
+}
+
+.servicio-card h3 {
+    color: var(--text-dark);
+}
+
+.servicio-card p {
+    color: var(--text-light);
+}
+
+
+/* ===========================================================
+   CONTACTO
+=========================================================== */
+
+.contacto {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.contacto h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.formulario-contacto {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fila {
+    display: flex;
+    gap: 20px;
+}
+
+.fila .campo {
+    flex: 1;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+    resize: none;   
+    padding: 12px;
+    border: 1px solid #b28cff;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #A020F0;
+    box-shadow: 0 0 5px rgba(160, 32, 240, 0.4);
+}
+
+.btn-enviar {
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #A020F0, #D020F0);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #8d1fd4, #bb1fd4);
+}
+
+.errores {
+    margin-top: 10px;
+    color: #ff4d6d;
+    font-weight: 600;
+    text-align: left;
+}
+
+
+
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+@media (max-width: 900px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .intro p {
