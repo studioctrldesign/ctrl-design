@@ -135,9 +135,8 @@ a, button, .card, .servicio-card {
     margin-left: 5%;
 }
 
-
 /* ===========================================================
-   HERO
+   HERO - Reducido espacio
 =========================================================== */
 .hero {
     min-height: calc(100vh - var(--navbar-height));
@@ -145,8 +144,8 @@ a, button, .card, .servicio-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 50px 80px;
-    gap: 40px;
+    padding: 30px 50px 50px;
+    gap: 30px;
     background: var(--bg-light);
 }
 
@@ -220,17 +219,17 @@ a, button, .card, .servicio-card {
 }
 
 /* ===========================================================
-   NOSOTRAS (ahora igual que SERVICIOS)
+   NOSOTRAS - Reducido espacio
 =========================================================== */
 .nosotras-section {
-    background: var(--bg-soft); /* blanco */
-    padding: 70px 40px;
+    background: var(--bg-soft);
+    padding: 40px 40px;
 }
 
 .intro {
     text-align: center;
     max-width: 900px;
-    margin: 0 auto 50px;
+    margin: 0 auto 30px;
 }
 
 .intro h1 {
@@ -261,8 +260,6 @@ a, button, .card, .servicio-card {
 .card {
     flex: 1 1 300px;
     max-width: 350px;
-    /* border-top: #FFCBA8 4px solid; */
-    /* background: #FFCBA8;  */
     border-radius: 18px;
     padding: 35px 25px;
     box-shadow: var(--shadow-sm);
@@ -329,16 +326,15 @@ a, button, .card, .servicio-card {
 
 .social-card a:hover {
     background: #FFCBA8;
-    /* background: var(--primary-color); */
     color: #fff;
     transform: scale(1.15);
 }
 
 /* ===========================================================
-   SERVICIOS
+   SERVICIOS - Reducido espacio
 =========================================================== */
 .servicios-section {
-    padding: 70px 40px;
+    padding: 50px 40px;
     background: var(--bg-soft);
     text-align: center;
 }
@@ -347,7 +343,7 @@ a, button, .card, .servicio-card {
     font-size: 2.8em;
     color: var(--primary-color);
     font-weight: 800;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .servicios-grid {
@@ -385,11 +381,10 @@ a, button, .card, .servicio-card {
 }
 
 /* ===========================================================
-   CONTACTO
+   CONTACTO - Reducido espacio
 =========================================================== */
-
 .contacto {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
     background: var(--bg-light);
 }
@@ -467,51 +462,176 @@ a, button, .card, .servicio-card {
 }
 
 /* ===========================================================
+   TRABAJOS - NUEVO ESTILO (Grid con hover)
+=========================================================== */
+.trabajos-section {
+    padding: 50px 40px;
+    background: var(--bg-light);
+    text-align: center;
+}
+
+.trabajos-title {
+    font-size: 2.8em;
+    color: var(--primary-color);
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.trabajos-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.trabajo-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.trabajo-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.trabajo-img {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.trabajo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.trabajo-item:hover .trabajo-img img {
+    transform: scale(1.05);
+}
+
+.trabajo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(92, 45, 145, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.trabajo-item:hover .trabajo-overlay {
+    opacity: 1;
+}
+
+.trabajo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.trabajo-item:hover .trabajo-link {
+    transform: translateY(0);
+}
+
+.trabajo-link:hover {
+    background: var(--primary-light);
+    color: white;
+}
+
+.trabajo-link i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.trabajo-link:hover i {
+    transform: translateX(5px);
+}
+
+.trabajo-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.trabajo-info h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.trabajo-info p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* ===========================================================
    RESPONSIVE
 =========================================================== */
 @media (max-width: 900px) {
-    .servicios-grid {
+    .trabajos-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 }
 
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
+    .trabajos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
-
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
+    
+    .trabajo-img {
+        height: 200px;
     }
 }
 
 @media (max-width: 600px) {
-    .servicios-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* HERO responsive adjustments: apilar y centrar imagen en móviles */
-    .hero {
-        flex-direction: column;
+    .trabajos-section {
         padding: 40px 20px;
-        gap: 20px;
-        align-items: center;
     }
-    .hero-text {
-        align-items: center;
-        text-align: center;
-        max-width: 100%;
+    
+    .trabajos-title {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
     }
-    .hero-text p {
-        text-align: center;
+    
+    .trabajos-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+        gap: 25px;
     }
-    .hero-img {
-        justify-content: center;
-        margin-top: 10px;
+    
+    .trabajo-img {
+        height: 220px;
     }
-    .hero-img img {
-        transform: translateX(0);
-        max-width: 90%;
+    
+    .trabajo-info {
+        padding: 15px;
+    }
+    
+    .trabajo-info h3 {
+        font-size: 1.2rem;
     }
 }
