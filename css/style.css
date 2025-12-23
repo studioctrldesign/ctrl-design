@@ -155,8 +155,8 @@ a, button, .card, .servicio-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 50px 50px;
-    gap: 40px;
+    padding: 30px 50px 50px;
+    gap: 30px;
     background: var(--bg-light);
 }
 
@@ -258,15 +258,15 @@ a, button, .card, .servicio-card {
    NOSOTRAS - Reducido espacio
 =========================================================== */
 .nosotras-section {
-    background: var(--bg-soft); /* blanco */
-    padding: 70px 40px;
+    background: var(--bg-soft);
+    padding: 40px 40px;
 }
 
 .intro {
     padding: 60px 20px 40px;
     text-align: center;
     max-width: 900px;
-    margin: 0 auto 50px;
+    margin: 0 auto 30px;
 }
 
 .intro h1 {
@@ -300,8 +300,6 @@ a, button, .card, .servicio-card {
 .card {
     flex: 1 1 300px;
     max-width: 350px;
-    /* border-top: #FFCBA8 4px solid; */
-    /* background: #FFCBA8;  */
     border-radius: 18px;
     padding: 35px 25px;
     box-shadow: var(--shadow-sm);
@@ -409,10 +407,6 @@ a, button, .card, .servicio-card {
     color: var(--primary-color);
     font-weight: 800;
     margin-bottom: 30px;
-}
-
-.intro h1{
-    color: var(--primary-color);
 }
 
 .servicios-grid {
