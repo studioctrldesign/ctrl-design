@@ -418,15 +418,23 @@ a, button, .card, .servicio-card {
 }
 
 .servicio-card {
-    background: #FFCBA8;
+    /* background: #FFCBA8; */
     padding: 35px 25px;
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
 }
 
 .servicio-card:hover {
+    /* background: #FFCBA8; */
     transform: translateY(-10px);
     box-shadow: var(--shadow-md);
+    border-top: #FFCBA8 4px solid;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+    border-top: #FFCBA8 4px solid;
 }
 
 .servicio-icon {
