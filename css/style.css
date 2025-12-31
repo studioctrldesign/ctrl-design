@@ -663,6 +663,25 @@ a, button, .card, .servicio-card {
     padding: 150px 40px;
 }
 
+
+/* SUBRAYADO ACTIVO EN EL MENÚ */
+.nav-link.active {
+    font-weight: 700;
+    color: white !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+
 /* ==================== SCROLL ANIMATION ==================== */
 .scroll-animation {
     opacity: 0;
