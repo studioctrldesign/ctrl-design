@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta name="description" content="CTRL+DESIGN - Diseño UX/UI y Desarrollo Web. Soluciones digitales innovadoras combinando diseño y tecnología.">
+    <meta name="theme-color" content="#5c2d91">
     <title>CTRL+DESIGN</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
@@ -19,13 +21,19 @@
             <img src="./img/logo.png" alt="logo" />
         </div>
 
-        <nav class="nav-links">
+        <nav class="nav-links" id="navLinks">
             <a href="#home" class="nav-link active" data-target="home">INICIO</a>
             <a href="#nosotras" class="nav-link" data-target="nosotras">NOSOTRAS</a>
             <a href="#servicios" class="nav-link" data-target="servicios">SERVICIOS</a>
             <a href="#trabajos" class="nav-link" data-target="trabajos">PORTFOLIO</a>
             <a href="#contacto" class="nav-link" data-target="contacto">CONTACTO</a>
         </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <main class="main-content">

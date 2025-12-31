@@ -1,7 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-link");
+    const hamburger = document.getElementById("hamburger");
+    const navLinksContainer = document.getElementById("navLinks");
     const offset = 120;
+
+    // Hamburger menu toggle
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinksContainer.classList.toggle("active");
+    });
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinksContainer.classList.remove("active");
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".navbar")) {
+            hamburger.classList.remove("active");
+            navLinksContainer.classList.remove("active");
+        }
+    });
 
     function updateActiveLink() {
     let current = "home";
