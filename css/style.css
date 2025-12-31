@@ -13,8 +13,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: #FFCBA8;
-    /* background: #ffffff; */
+    /* background: #FFCBA8; */
+    background: #ffffff;
     color: #222;
     line-height: 1.5;
     padding-top: var(--navbar-height);
@@ -653,12 +653,43 @@ a, button, .card, .servicio-card {
     font-weight: 500;
 }
 
+/* ===========================================================
+   SECTIONS PADDING ADJUSTED
+/* =========================================================== */
 .nosotras-section,
 .servicios-section,
 .trabajos-section,
 .contacto {
     padding: 150px 40px;
 }
+
+/* ==================== SCROLL ANIMATION ==================== */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cards-container .card,
+.servicios-grid .servicio-card,
+.trabajos-grid .trabajo-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.cards-container .card.visible,
+.servicios-grid .servicio-card.visible,
+.trabajos-grid .trabajo-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* ===========================================================
    RESPONSIVE
