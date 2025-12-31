@@ -456,12 +456,6 @@ a, button, .card, .servicio-card {
     text-align: center;
 }
 
-
-.contacto h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
 .formulario-contacto {
     max-width: 700px;
     margin: 0 auto;
