@@ -431,12 +431,6 @@ a, button, .card, .servicio-card {
     border-top: #FFCBA8 4px solid;
 }
 
-.servicio-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-md);
-    border-top: #FFCBA8 4px solid;
-}
-
 .servicio-icon {
     width: 75px;
     height: 75px;
