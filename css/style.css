@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    --section-space-desktop: 45px;
+    --section-space-mobile: 30px;
+
 }
 
 html, body {
@@ -78,7 +81,6 @@ a, button, .card, .servicio-card {
     color: #ffffff;     
 }
 
-
 .nav-links a:hover {
     color: #ffffff;
 }
@@ -147,7 +149,7 @@ a, button, .card, .servicio-card {
 }
 
 /* ===========================================================
-   HERO - Reducido espacio
+   HERO - Espacio ajustado
 =========================================================== */
 .hero {
     min-height: calc(100vh - var(--navbar-height));
@@ -155,7 +157,7 @@ a, button, .card, .servicio-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 50px 50px;
+    padding: 30px 50px 30px; /* Reducido padding-bottom */
     gap: 30px;
     background: var(--bg-light);
 }
@@ -168,7 +170,6 @@ a, button, .card, .servicio-card {
 }
 
 .hero-text h1 {
-    /* margin-bottom: 16px; */
     font-size: 2.8em;
     font-weight: 700;
     text-transform: uppercase;
@@ -209,7 +210,6 @@ a, button, .card, .servicio-card {
     width: 100%;
 }
 
-
 /* ===========================================================
                             BUTTONS
 =========================================================== */
@@ -230,7 +230,6 @@ a, button, .card, .servicio-card {
     background: #692fad;
     transform: translateY(-2px);
 }
-
 
 /* ===========================================================
    FOOTER
@@ -255,15 +254,15 @@ a, button, .card, .servicio-card {
 }
 
 /* ===========================================================
-   NOSOTRAS - Reducido espacio
+   NOSOTRAS
 =========================================================== */
 .nosotras-section {
     background: var(--bg-soft);
-    padding: 40px 40px;
+    padding: 90px 40px; 
 }
 
 .intro {
-    padding: 60px 20px 40px;
+    padding: 60px 20px 20px; 
     text-align: center;
     max-width: 900px;
     margin: 0 auto 30px;
@@ -359,7 +358,6 @@ a, button, .card, .servicio-card {
 .desc {
     flex-grow: 1;
     color: var(--text-dark);
-    /* color: #555; */
     line-height: 1.6;
     margin-bottom: 20px;
     text-align: justify;
@@ -394,10 +392,10 @@ a, button, .card, .servicio-card {
 }
 
 /* ===========================================================
-   SERVICIOS - Reducido espacio
+   SERVICIOS
 =========================================================== */
 .servicios-section {
-    padding: 50px 40px;
+    padding: 90px 40px; 
     background: var(--bg-soft);
     text-align: center;
 }
@@ -418,14 +416,12 @@ a, button, .card, .servicio-card {
 }
 
 .servicio-card {
-    /* background: #FFCBA8; */
     padding: 35px 25px;
     border-radius: 18px;
     box-shadow: var(--shadow-sm);
 }
 
 .servicio-card:hover {
-    /* background: #FFCBA8; */
     transform: translateY(-10px);
     box-shadow: var(--shadow-md);
     border-top: #FFCBA8 4px solid;
@@ -445,15 +441,13 @@ a, button, .card, .servicio-card {
     color: var(--text-light);
 }
 
-
 /* ===========================================================
-   CONTACTO - Reducido espacio
+   CONTACTO
 =========================================================== */
 .contacto {
-    padding: 40px 20px;
+    padding: 90px 40px; 
     text-align: center;
     background: var(--bg-light);
-    text-align: center;
 }
 
 .formulario-contacto {
@@ -524,10 +518,10 @@ a, button, .card, .servicio-card {
 }
 
 /* ===========================================================
-   TRABAJOS - NUEVO ESTILO (Grid con hover)
+   TRABAJOS
 =========================================================== */
 .trabajos-section {
-    padding: 50px 40px;
+    padding: 90px 40px; 
     background: var(--bg-light);
     text-align: center;
 }
@@ -647,17 +641,6 @@ a, button, .card, .servicio-card {
     font-weight: 500;
 }
 
-/* ===========================================================
-   SECTIONS PADDING ADJUSTED
-/* =========================================================== */
-.nosotras-section,
-.servicios-section,
-.trabajos-section,
-.contacto {
-    padding: 150px 40px;
-}
-
-
 /* SUBRAYADO ACTIVO EN EL MENÚ */
 .nav-link.active {
     font-weight: 700;
@@ -674,7 +657,6 @@ a, button, .card, .servicio-card {
     background: white;
     border-radius: 2px;
 }
-
 
 /* ==================== SCROLL ANIMATION ==================== */
 .scroll-animation {
@@ -702,7 +684,6 @@ a, button, .card, .servicio-card {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 /* ===========================================================
    RESPONSIVE
@@ -753,4 +734,187 @@ a, button, .card, .servicio-card {
     .trabajo-info h3 {
         font-size: 1.2rem;
     }
+}
+/* ==================== MENU HAMBURGUESA ==================== */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 0;
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+}
+/* ==================== MENU HAMBURGUESA ==================== */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.9rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 0;
+        display: none;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+}
+/* ==================== FORMULARIO RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+    .formulario-contacto {
+        padding: 0 10px;
+    }
+
+    .fila {
+        flex-direction: column;
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 16px; 
+    }
+}
+/* ==================== HERO RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-text {
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-text p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .hero-img img {
+        transform: none;
+        max-width: 100%;
+        margin: 20px auto 0;
+    }
+
+    .btn-primary {
+        margin-left: 0;
+    }
+}
+/* ==================== SERVICIOS RESPONSIVE ==================== */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .servicios-section {
+        padding: 50px 20px;
+    }
+
+    .servicios-title {
+        font-size: 2.2rem;
+    }
+}
+/* ==================== ESPACIO HERO / NAVBAR ==================== */
+
+.hero {
+    padding-top: calc(var(--navbar-height) + 40px);
+}
+/* ==================== ESPACIADO ENTRE SECCIONES ==================== */
+
+.nosotras-section,
+.servicios-section,
+.trabajos-section,
+.contacto {
+    padding-top: var(--section-space-desktop);
+    padding-bottom: var(--section-space-desktop);
+}
+
+@media (max-width: 768px) {
+    .nosotras-section,
+    .servicios-section,
+    .trabajos-section,
+    .contacto {
+        padding-top: var(--section-space-mobile);
+        padding-bottom: var(--section-space-mobile);
+    }
+}
+section + section {
+    margin-top: 20px;
 }
